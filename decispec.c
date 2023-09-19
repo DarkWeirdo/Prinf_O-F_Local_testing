@@ -1,9 +1,9 @@
-#include "maintest.h"
+#include "main.h"
 /**
  * decispec - function to handle decimal format specifier
  * @arg_list: argument to process
  * Return: Returns number of processed characters
-*/
+ */
 int decispec(va_list arg_list)
 {
 int DecRefNum = va_arg(arg_list, int);

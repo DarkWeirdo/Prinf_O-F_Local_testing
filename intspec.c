@@ -1,9 +1,9 @@
-#include "maintest.h"
+#include "main.h"
 /**
  * intspec - function to handle integer format specifier
  * @arg_list: argument to process
  * Return: Returns number of processed characters
-*/
+ */
 int intspec(va_list arg_list)
 {
 int IntRefNum = va_arg(arg_list, int);
