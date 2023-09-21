@@ -11,8 +11,8 @@ int main(void)
 {
 	int len, len2;
 
-	len = _printf("Let's print a simple sentence.\n");
-	len2 = printf("Let's print a simple sentence.\n");
+	len = _printf("Let'see if the cast is correctly done: %c. Did it work?\n", 48);
+	len2 = printf("Let'see if the cast is correctly done: %c. Did it work?\n", 48);
 	fflush(stdout);
 	if (len != len2)
 	{
