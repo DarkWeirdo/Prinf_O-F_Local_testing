@@ -1,11 +1,21 @@
-#include "main.h"
 /**
- * percentspec - function to print '%'
- * @percent: percent character '%'
- * Return: return 1 to be added to NChars
-*/
-int percentspec(char percent)
+ * print_percent - Prints a percentage
+ * @ty: Types of arguments
+ * @buf: Buffer array to prints character
+ * @fl: Flags
+ * @wi: Width.
+ * @pre: Precision
+ * @s: size
+ * Return: Chars
+ */
+int print_percent(ty, char buf[], int fl, int wi, int pre, int s)
 {
-_putchar(percent);
-return (0);
+UNUSED(ty);
+UNUSED(buf);
+UNUSED(fl);
+UNUSED(wi);
+UNUSED(pre);
+UNUSED(s);
+return (write(1, "%%", 1));
 }
+

@@ -1,15 +1,54 @@
-#include "main.h"
 /**
- * strspec - prints string formatted input
- * @arg_list: argument input
- * Return: returns length of string to be added to NChars
-*/
-int strspec(va_list arg_list)
+ * print_s - Prints a string
+ * @ty: Types of arguments
+ * @buf: Buffer array to prints character
+ * @fl: Flags
+ * @wi: Width.
+ * @pre: Precision
+ * @s: size
+ * Return: Chars
+ */
+int print_s(ty, char buf[], int fl, int wi, int pre, int s)
 {
-char *str = va_arg(arg_list, char*);
-int str_len = 0;
-while (str[str_len] != 0)
-str_len++;
-write(1, str, str_len);
-return (str_len);
+int len = 0, i;
+char *string = va_argument(ty, char *);
+
+UNUSED(buf);
+UNUSED(fl);
+UNUSED(wi);
+UNUSED(pre);
+UNUSED(si);
+if (str == NULL)
+{
+string = "(null)";
+if (pre >= 6)
+string = "      ";
 }
+
+while (string[len] != '\0')
+len++;
+
+if (pre >= 0 && pre < len)
+len = pre;
+
+if (wi > len)
+{
+if (flags & F_MINUS)
+{
+write(1, &str[0], length);
+for (i = wi - len; i > 0; i--)
+write(1, " ", 1);
+return (width);
+}
+else
+{
+for (i = wi - len; i > 0; i--)
+write(1, " ", 1);
+write(1, &string[0], len);
+return (wi);
+}
+}
+
+return (write(1, string, len));
+}
+
